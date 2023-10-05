@@ -1,1 +1,1 @@
-![Server Side (Back-end) General diagram](../server-side.png)
+![Server Side (Back-end) General diagram](server-side.png)
