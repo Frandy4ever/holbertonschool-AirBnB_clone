@@ -1,66 +1,64 @@
 #!/usr/bin/python3
+"""
+Contains class BaseModel
+"""
 
 from datetime import datetime
+import models
+from os import getenv
 import uuid
-from models import storage
+
+time = "%Y-%m-%dT%H:%M:%S.%f"
 
 class BaseModel:
-    """
-    Base class for all models.
-
-    Attributes:
-        id (str): A unique identifier for the object.
-        created_at (datetime): The date and time when the object was created.
-        updated_at (datetime): The date and time when the object was last updated.
-    """
+    """The BaseModel class from which future classes will be derived"""
     def __init__(self, *args, **kwargs):
-        """
-        Initializes a new BaseModel instance.
-
-        Args:
-            *args: Additional arguments (not used).
-            **kwargs: Keyword arguments containing object attributes.
-        """
+        """Initialization of the base model"""
         if kwargs:
-            date_format = "%Y-%m-%dT%H:%M:%S.%f"
-            k_dict = kwargs.copy()
-            del k_dict["__class__"]
-            for key in k_dict:
-                if key in ("created_at", "updated_at"):
-                    k_dict[key] = datetime.strptime(k_dict[key], date_format)
-            self.__dict__ = k_dict
+            for key, value in kwargs.items():
+                if key != "__class__":
+                    setattr(self, key, value)
+            if kwargs.get("created_at", None) and type(self.created_at) is str:
+                self.created_at = datetime.strptime(kwargs["created_at"], time)
+            else:
+                self.created_at = datetime.utcnow()
+            if kwargs.get("updated_at", None) and type(self.updated_at) is str:
+                self.updated_at = datetime.strptime(kwargs["updated_at"], time)
+            else:
+                self.updated_at = datetime.utcnow()
+            if kwargs.get("id", None) is None:
+                self.id = str(uuid.uuid4())
         else:
             self.id = str(uuid.uuid4())
-            self.created_at = datetime.today()
-            self.updated_at = datetime.today()
-            storage.new(self)
+            self.created_at = datetime.utcnow()
+            self.updated_at = self.created_at
 
     def __str__(self):
-        """
-        Returns a string representation of the BaseModel instance.
-
-        Returns:
-            str: A string in the format "[class name] (id) {attributes}".
-        """
-        return "[{}] ({}) {}".format(self.__class__.__name__,
-                                     self.id, self.__dict__)
+        """String representation of the BaseModel class"""
+        return "[{:s}] ({:s}) {}".format(self.__class__.__name__, self.id,
+                                         self.__dict__)
 
     def save(self):
-        """
-        Updates the "updated_at" attribute and saves the object to storage.
-        """
-        self.updated_at = datetime.today()
-        storage.save()
+        """updates the attribute 'updated_at' with the current datetime"""
+        self.updated_at = datetime.utcnow()
+        models.storage.new(self)
+        models.storage.save()
 
-    def to_dict(self):
-        """
-        Converts the BaseModel instance to a dictionary representation.
-
-        Returns:
-            dict: A dictionary containing the object's attributes.
-        """
+    def to_dict(self, save_fs=None):
+        """returns a dictionary containing all keys/values of the instance"""
         new_dict = self.__dict__.copy()
+        if "created_at" in new_dict:
+            new_dict["created_at"] = new_dict["created_at"].strftime(time)
+        if "updated_at" in new_dict:
+            new_dict["updated_at"] = new_dict["updated_at"].strftime(time)
         new_dict["__class__"] = self.__class__.__name__
-        new_dict["created_at"] = self.created_at.isoformat()
-        new_dict["updated_at"] = self.updated_at.isoformat()
+        if "_sa_instance_state" in new_dict:
+            del new_dict["_sa_instance_state"]
+        if save_fs is None:
+            if "password" in new_dict:
+                del new_dict["password"]
         return new_dict
+
+    def delete(self):
+        """delete the current instance from the storage"""
+        models.storage.delete(self)
