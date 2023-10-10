@@ -1,5 +1,11 @@
 ![Server Side (Back-end) General diagram](images/server-side.png)
+[![contribuitors](https://img.shields.io/github/contributors/cbarros7/AirBnB_clone?style=plastic)](https://github.com/cbarros7/AirBnB_clone/graphs/contributors)
+[![lisence](https://img.shields.io/github/license/cbarros7/AirBnB_clone?style=plastic)](https://github.com/cbarros7/AirBnB_clone/blob/master/LICENSE)
+[![plattaforms](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1?color=%23EF7F1A&style=plastic)](https://www.powershellgallery.com/packages/DNS.1.1.1.1/0.0.7)
+[![python versiion](https://img.shields.io/pypi/pyversions/3?color=%23EF7F1A&style=plastic)](https://www.python.org/download/releases/3.0/)
 
+[![Twitter Jose](https://img.shields.io/twitter/follow/joseAVallejo12?label=JoseVallejo&style=social)](https://twitter.com/JoseAVallejo12)
+[![Twitter Carlos](https://img.shields.io/twitter/follow/cbarros27?label=CarlosBarros&style=social)](https://twitter.com/cbarros27)
 
 ## **Background Context**
 ## **First step: Write a command interpreter to manage your AirBnB objects.**
