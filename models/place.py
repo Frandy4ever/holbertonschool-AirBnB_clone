@@ -15,15 +15,15 @@ class Place(BaseModel):
     longitude = 0.0
     amenity_ids = []
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **args, **kwargs)
-        self.city.id = kwargs.get("city_id", "")
-        if self.city_id == "":
-            self.city_id = City().id
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **args, **kwargs)
+    #     self.city.id = kwargs.get("city_id", "")
+    #     if self.city_id == "":
+    #         self.city_id = City().id
 
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **args, **kwargs)
-        self.user.id = kwargs.get("User_id", "")
-        if self.user_id == "":
-            self.user_id = User().id
+    # def __init__(self, *args, **kwargs):
+    #     super().__init__(*args, **args, **kwargs)
+    #     self.user.id = kwargs.get("User_id", "")
+    #     if self.user_id == "":
+    #         self.user_id = User().id
 
