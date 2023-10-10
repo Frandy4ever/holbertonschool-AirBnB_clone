@@ -1,25 +1,9 @@
 #!/usr/bin/python3
-<<<<<<< HEAD
-""" holds class Amenity"""
-import models
-from models.base_model import BaseModel, Base
-from os import getenv
-
-
-class Amenity(BaseModel, Base):
-    """Representation of Amenity """
-    pass
-
-    def __init__(self, *args, **kwargs):
-        """initializes Amenity"""
-        super().__init__(*args, **kwargs)
-=======
-"""Class Amenity"""
-
+"""New class inherit from BaseModel"""
 from models.base_model import BaseModel
 
 
 class Amenity(BaseModel):
-    """Class Amenity Model"""
+    """Class Amenity that inherit from BaseModel"""
+
     name = ""
->>>>>>> d554b69a90b56cf03619fa98ce009b9cc7313222
