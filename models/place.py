@@ -22,10 +22,8 @@ class Place(BaseModel):
             self.city_id = City().id
 
     def __init__(self, *args, **kwargs):
-            super().__init__(*args, **args, **kwargs)
-            self.user.id = kwargs.get("User_id", "")
-            if self.user_id == "":
-                self.user_id = User().id
+        super().__init__(*args, **args, **kwargs)
+        self.user.id = kwargs.get("User_id", "")
+        if self.user_id == "":
+            self.user_id = User().id
 
-    def __init__(self, *args, **kwargs):
-        
