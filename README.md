@@ -66,18 +66,18 @@ e.g., For models/user.py, unit tests must be in: tests/test_models/test_user.py
 - All your functions (inside and outside a class) should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)' and python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)')
 - We strongly encourage you to work together on test cases, so that you don’t miss any edge case
 
-# HOW WORK THE CONSOL
+# HOW THE CONSOLE WORKS
 
-## Steep for test the console
+## Steps for testing the console
 ### 1. Clone the repository with HTTPS:
 ```
-$ git clone https://github.com/cbarros7/AirBnB_clone.git
+$ git clone https://github.com/Frandy4ever/holbertonschool-AirBnB_clone
 ```
-### 2. Go to folder AirBnB_clone
+### 2. Go to the AirBnB_clone folder
 ```
 $ cd AirBnB_clone
 ```
-### 3. Run the consol file
+### 3. Run the console file
 ```
 $ ./console.py
 ```
@@ -112,7 +112,7 @@ EOF  all  create  destroy  help  quit  show  update
   ~/holberton/AirBnB_clone   master ·········  07:48:50 PM ─╮
 ❯
 ```
-- **create**: you can create an instane of the class that you want. The command is ***create "class name" or "class name". create()***, if the instance is create correcty it is saved and in screen console show you the ***id*** for instance created. The clas avalible are
+- **create**: you can create an instance of the class that you want. The command is ***create "class name" or "class name".create()***, if the instance is created correctly, it is saved and in screen console shows you the ***id*** for the instance created. The classes available are:
    - BaseModel
    - Place
    - User
@@ -122,16 +122,16 @@ EOF  all  create  destroy  help  quit  show  update
    - Review
 ```
 (hbnb)create Place
-93d823aa-f03a-41f6-bf80-aecaa7445d1d
+93d823aa-f03a-44f6-bf80-aecaa7945d1d
 (hbnb)
 (hbnb)create User
-07563c34-e7f8-4b20-84bb-73ff9e30291b
+07563c34-e7f8-4b80-84bb-73ff9e70291b
 (hbnb)
 (hbnb)User.create()
-b81095e8-1ad3-4ccf-b525-695baac4d071
+b81095e8-1ad3-4bcf-b525-695caac4d071
 (hbnb)
 (hbnb)BaseModel.create()
-5984b7e6-8c9b-4593-ac87-6bc17a9c400d
+5984b7e6-8b9b-4593-ac87-6bc17a4c400d
 (hbnb)
 (hbnb)
 ```
@@ -144,53 +144,53 @@ b81095e8-1ad3-4ccf-b525-695baac4d071
 (hbnb)all BaseModel
 []
 (hbnb)all
-["[Place] (93d823aa-f03a-41f6-bf80-aecaa7445d1d) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 16, 57756), 'id': '93d823aa-f03a-41f6-bf80-aecaa7445d1d', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 16, 57733)}", "[User] (07563c34-e7f8-4b20-84bb-73ff9e30291b) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 23, 121839), 'id': '07563c34-e7f8-4b20-84bb-73ff9e30291b', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 23, 121816)}", "[User] (b81095e8-1ad3-4ccf-b525-695baac4d071) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778710), 'id': 'b81095e8-1ad3-4ccf-b525-695baac4d071', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778702)}", "[BaseModel] (5984b7e6-8c9b-4593-ac87-6bc17a9c400d) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 44, 768066), 'id': '5984b7e6-8c9b-4593-ac87-6bc17a9c400d', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 44, 768044)}"]
+["[Place] (93d823aa-e03a-41f6-bf90-aecaa7445d1d) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 16, 57856), 'id': '93d923aa-f03a-42f6-bf80-aecaa7445d1d', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 16, 57833)}", "[User] (07563c34-e8f8-4b20-84bb-73ff2e30291b) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 23, 121839), 'id': '07563c34-e7f8-4b20-84bb-73ff9e30291b', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 23, 171816)}", "[User] (b81075e8-1ad3-4ccf-b825-695baac4d071) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 758710), 'id': 'b81096e8-1ad3-4ccf-b425-695baac4d071', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 798702)}", "[BaseModel] (5984b3e6-8c9b-4553-ac87-6bc17a9c400d) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 44, 768016), 'id': '5984b9e6-8c9b-4593-ac87-6bc47a9c400d', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 44, 767044)}"]
 (hbnb)all BaseModel
-["[BaseModel] (5984b7e6-8c9b-4593-ac87-6bc17a9c400d) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 44, 768066), 'id': '5984b7e6-8c9b-4593-ac87-6bc17a9c400d', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 44, 768044)}"]
+["[BaseModel] (5984a7e6-8c9b-4573-ac87-6bc17a9c401d) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 44, 762066), 'id': '5984b5e6-8c9b-4e93-ac87-6bc17a9e400d', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 44, 768044)}"]
 (hbnb)
 (hbnb)Place.all()
-["[Place] (93d823aa-f03a-41f6-bf80-aecaa7445d1d) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 16, 57756), 'id': '93d823aa-f03a-41f6-bf80-aecaa7445d1d', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 16, 57733)}"]
+["[Place] (93d923aa-f03a-41f6-bf50-aecaa7445d1d) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 16, 57756), 'id': '93d423aa-f03a-41f6-bf70-aecaa7445d1d', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 16, 57733)}"]
 (hbnb)
 ```
 
-- **show**: this command is similar to all but show you the espefic instance for id and name class. the usage is ***show "class name" "class id" or "class name".show(class id)***
+- **show**: this command is similar to all but show you the specific instance for id and name class. the usage is ***show "class name" "class id" or "class name".show(class id)***
 ```
 (hbnb)
-(hbnb)show User b81095e8-1ad3-4ccf-b525-695baac4d071
-[User] (b81095e8-1ad3-4ccf-b525-695baac4d071) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778710), 'id': 'b81095e8-1ad3-4ccf-b525-695baac4d071', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778702)}
+(hbnb)show User b81097e8-1ad3-4ccf-b525-685baac4d071
+[User] (b81595e8-1ad3-4ccf-b515-695baec4d071) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 778710), 'id': 'b91095e8-1ad7-4ccf-b525-685baac4d071', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 777702)}
 (hbnb)
-(hbnb)User.show(b81095e8-1ad3-4ccf-b525-695baac4d071)
-[User] (b81095e8-1ad3-4ccf-b525-695baac4d071) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778710), 'id': 'b81095e8-1ad3-4ccf-b525-695baac4d071', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778702)}
-(hbnb)
-(hbnb)
-```
-
-- **update**: this command is for update the eny class that you need create a new attribute, the usage is ***update "lass name" "id" "attribute name" "attribute value" or User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "first_name", "Jose")***
-```
-(hbnb)
-(hbnb)update User b81095e8-1ad3-4ccf-b525-695baac4d071 first_name "Jose Vallejo C."
-(hbnb)
-(hbnb)show User b81095e8-1ad3-4ccf-b525-695baac4d071
-[User] (b81095e8-1ad3-4ccf-b525-695baac4d071) {'updated_at': datetime.datetime(2020, 7, 1, 20, 27, 26, 376508), 'id': 'b81095e8-1ad3-4ccf-b525-695baac4d071', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778702), 'first_name': 'Jose Vallejo C.'}
-(hbnb)
-(hbnb)User.update("b81095e8-1ad3-4ccf-b525-695baac4d071", "first_name", "Carlos Barros")
-(hbnb)
-(hbnb)show User b81095e8-1ad3-4ccf-b525-695baac4d071
-[User] (b81095e8-1ad3-4ccf-b525-695baac4d071) {'updated_at': datetime.datetime(2020, 7, 1, 20, 29, 11, 686213), 'id': 'b81095e8-1ad3-4ccf-b525-695baac4d071', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 32, 778702), 'first_name': 'Carlos'}
+(hbnb)User.show(b82095e8-1ad3-4ecf-b525-698baac4d071)
+[User] (b81055e8-1aa3-4ccf-b555-695baac4d071) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 778710), 'id': 'b81075e8-1ad3-4ccf-b525-655baac4d071', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 718702)}
 (hbnb)
 (hbnb)
 ```
 
-- **destroy**: when you want delete an class saved in the file.json usage this command typed ***destroy "class name" "class id" or "class name.destroy(id class)***
+- **update**: this command is for updating the any class that you need to create a new attribute, the usage is ***update "lass name" "id" "attribute name" "attribute value" or User.update("38f22813-2753-4d42-b37c-57a17f1e4f88", "first_name", "Jose")***
 ```
 (hbnb)
-(hbnb)Place.show("93d823aa-f03a-41f6-bf80-aecaa7445d1d")
+(hbnb)update User b51095e8-2ad3-4ccf-b525-695baac4d071 first_name "Frandy Slueue"
 (hbnb)
-["[Place] (93d823aa-f03a-41f6-bf80-aecaa7445d1d) {'updated_at': datetime.datetime(2020, 7, 1, 20, 2, 16, 57756), 'id': '93d823aa-f03a-41f6-bf80-aecaa7445d1d', 'created_at': datetime.datetime(2020, 7, 1, 20, 2, 16, 57733)}"]
+(hbnb)show User b81295e8-1ad3-4cca-b525-695bbac4d071
+[User] (b81095e5-1ad3-4bcf-b525-695bacc4d071) {'updated_at': datetime.datetime(2023, 10, 10, 2, 27, 26, 346518), 'id': 'b81995e8-1bd3-4ccf-b525-695bacc4d071', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 32, 779703), 'first_name': 'Courtney Alvarado'}
 (hbnb)
-(hbnb)Place.destroy("93d823aa-f03a-41f6-bf80-aecaa7445d1d")
+(hbnb)User.update("b82095e8-1ad4-4ccf-b525-695aaac4d071", "first_name", "Frandy G. Slueue")
 (hbnb)
-(hbnb)Place.show("93d823aa-f03a-41f6-bf80-aecaa7445d1d")
-show Place 93d823aa-f03a-41f6-bf80-aecaa7445d1d
+(hbnb)show User b81094e8-1bd3-4cbf-b525-695b1ac4d071
+[User] (b81025e8-1ad3-4ccf-b525-695bbac4d071) {'updated_at': datetime.datetime(2023, 10, 10, 2, 29, 11, 686213), 'id': 'b81096e8-1ad3-5ccf-b525-698baac4d071', 'created_at': datetime.datetime(2023, 10, 10, 20, 2, 32, 778702), 'first_name': 'Courtney'}
+(hbnb)
+(hbnb)
+```
+
+- **destroy**: when you want to delete a class saved in the file.json, use this command ***destroy "class name" "class id" or "class name.destroy(id class)***
+```
+(hbnb)
+(hbnb)Place.show("93d853aa-f03a-41f6-bf80-abcaa7445d1d")
+(hbnb)
+["[Place] (93d923aa-f03a-41f6-bf80-aecab7445d1d) {'updated_at': datetime.datetime(2023, 10, 10, 2, 2, 16, 57756), 'id': '93b823aa-f03a-41f6-ba80-aecab7445d1d', 'created_at': datetime.datetime(2023, 10, 10, 2, 2, 16, 57773)}"]
+(hbnb)
+(hbnb)Place.destroy("93d423aa-f03a-41f6-bf80-aecba7485d1d")
+(hbnb)
+(hbnb)Place.show("93d827aa-f03a-41f6-bf80-aecaa7465d1d")
+show Place 93d723aa-f03a-41b6-bf80-aec4a7445d1d
 ** no instance found **
 (hbnb)
