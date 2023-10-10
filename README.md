@@ -1,11 +1,9 @@
 ![Server Side (Back-end) General diagram](images/server-side.png)
-<!-- [![contribuitors](https://github.com/Frandy4ever/holbertonschool-AirBnB_clone/blob/courtney-branch/AUTHORS)](https://github.com/Frandy4ever/holbertonschool-AirBnB_clone/blob/frandy-branch/AUTHORS)
-[![lisence](https://github.com/Frandy4ever/holbertonschool-AirBnB_clone/blob/frandy-branch/LICENSE)](https://github.com/Frandy4ever/holbertonschool-AirBnB_clone/blob/frandy-branch/LICENSE)
+
+[![contribuitors](https://img.shields.io/github/contributors/cbarros7/AirBnB_clone?style=plastic)](https://github.com/cbarros7/AirBnB_clone/graphs/contributors)
+[![lisence](https://img.shields.io/github/license/cbarros7/AirBnB_clone?style=plastic)](https://github.com/cbarros7/AirBnB_clone/blob/master/LICENSE)
 [![plattaforms](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1?color=%23EF7F1A&style=plastic)](https://www.powershellgallery.com/packages/DNS.1.1.1.1/0.0.7)
 [![python versiion](https://img.shields.io/pypi/pyversions/3?color=%23EF7F1A&style=plastic)](https://www.python.org/download/releases/3.0/)
-
-[![Twitter Frandy](https://img.shields.io/twitter/follow/Frandy4ever?label=Frandy4ever&style=social)](https://twitter.com/frandy4ever)
-[![Twitter Courtney]()]() -->
 *******************************************************************
 *******************************************************************
 [![contribuitors](https://img.shields.io/github/contributors/frandy4ever/AirBnB_clone?style=plastic)](https://github.com/Frandy4ever/holbertonschool-AirBnB_clone/blob/courtney-branch/AUTHORS)
