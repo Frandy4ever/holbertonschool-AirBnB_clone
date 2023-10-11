@@ -4,13 +4,16 @@ from models.base_model import BaseModel
 
 
 class User(BaseModel):
-    """Class User that inherit from BaseModel"""
+    """Class representing a User that inherit from BaseModel
+
+    Attributes:
+        email (str): The user's email address
+        password (str): The user's password
+        first_name (str): the users first name
+        last_name (str): the users last name
+    """
 
     email = ""
     password = ""
     first_name = ""
     last_name = ""
-
-    def __init__(self, *args, **kwargs):
-        """Initialize constructor for BaseModel"""
-        super().__init__(*args, **kwargs)
