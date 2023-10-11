@@ -3,11 +3,10 @@
 Contains class BaseModel
 """
 
+
 from datetime import datetime
 import models
 from os import getenv
-from sqlalchemy import Column, String, DateTime
-from sqlalchemy.ext.declarative import declarative_base
 import uuid
 
 time = "%Y-%m-%dT%H:%M:%S.%f"
