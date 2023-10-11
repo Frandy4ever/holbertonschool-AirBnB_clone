@@ -114,15 +114,15 @@ class HBNBCommand(cmd.Cmd):
 
     def do_EOF(self, line):
         """Signal C+d for exit."""
-        print()
         return True
 
     def do_quit(self, line):
         """Quit command to exit the program\n"""
-        sys.exit()
+        return True
 
     def emptyline(self):
         """Overwrite method emptyline."""
+        pass
 
     def check_class_name(self, name=""):
         """Check if stdin user typed class name and id."""
