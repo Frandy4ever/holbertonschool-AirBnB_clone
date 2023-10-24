@@ -1,0 +1,14 @@
+/* styles/3-common.css */
+body {
+    margin: 0;
+    padding: 0;
+    color: #484848;
+    font-size: 14px;
+    font-family: Circular,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+  /* Favicon styling */
+link[rel="icon"] {
+    width: 16px;
+    height: 16px;
+}
